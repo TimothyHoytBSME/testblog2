@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Second Test Blog</title>
+		<%= csrf_meta_tags %>
+	    <%= csp_meta_tag %>
+		<%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' %>
+    	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    	<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+	</head>
+	
+	<body> 
+		 <div class="container">	
+			<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+			  	<a class="navbar-brand">Test Blog 2</a>
+			  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+			    	<span class="navbar-toggler-icon"></span>
+			  	</button>
+			
+				<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+					<ul class="navbar-nav mr-auto">
+					  <li class="nav-item active">
+					    <a class="nav-link" href=<%= home_path %>>Home</a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" href=<%= new_post_path%>>New</a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" href=<%= about_path%>>About</a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">coming soon</a>
+					  </li>				  
+					</ul>
+					<form class="form-inline my-2 my-lg-0">
+						<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+				  		<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+					</form>
+					
+				</div> 				 
+			</nav>			
+		</div>	
+		<p>..</p>
+		<p>..</p>
+		<div class="container">
+				<%= yield %>
+		</div>
+		
+	</body>
+</html>
